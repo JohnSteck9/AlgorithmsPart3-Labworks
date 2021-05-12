@@ -1,7 +1,7 @@
 import unittest
 from cards_v2 import *
-# from Laba_2.cards import *
-# from Laba_2.sorting_algo import *
+from Laba_2.cards import *
+from Laba_2.sorting_algo import *
 
 array1 = [1, 2, 3]
 array2 = [0, 1, 2, 3]
@@ -15,7 +15,7 @@ array9 = [0, 0, 0, 0, 1, 3, 5, 7, 9, 12, 13, 16, 17, 18,
           19, 21, 22, 24, 26, 27, 29, 30, 31, 32, 34, 36, 37]
 array10 = [0, 0, 1, 2, 3, 999997, 999998, 999999, 1000000]
 array11 = [0, 0, 1, 2, 3, 999999, 1000000]
-array12 = [0, 0, 0, 2, 3, 5, 8, 9, 10,12,20]
+array12 = [0, 0, 0, 2, 3, 5, 8, 9, 10, 12, 20]
 array13 = [0, 0, 0, 2, 4, 6, 9, 10]
 array14 = [0, 0, 0]
 
