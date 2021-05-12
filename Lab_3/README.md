@@ -5,4 +5,4 @@
     python main.py
 
 ## Tests 
-    unit_test.py
+    python unit_test.py
