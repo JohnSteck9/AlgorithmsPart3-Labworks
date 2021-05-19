@@ -2,7 +2,7 @@
 # max complexity = O(n)
 
 class RabinCarp:
-    def __init__(self, text, pattern_len):
+    def __init__(self, text: str, pattern_len: int):
         self.text = text
         self.pattern_len = pattern_len
         self.base = 256
@@ -14,7 +14,7 @@ class RabinCarp:
         self.base_char = 0  # ord first char
         self.hash = self.get_hash(text, pattern_len)
 
-    def get_hash(self, text, pattern_len):
+    def get_hash(self, text: str, pattern_len: int):
         base_char = 0
         hash_value = 0
         for i in range(0, pattern_len):
@@ -43,6 +43,11 @@ class RabinCarp:
         return self.text[self.window_start:self.window_end]
 
 
+# Las Vegas version
+def final_check(str1, str2):
+    return True if str1 == str2 else False
+
+
 def main(text, pattern):
     if text == "" or pattern == "":
         return None
@@ -66,11 +71,6 @@ def main(text, pattern):
     # return "Not Found"
 
 
-# Las Vegas version
-def final_check(str1, str2):
-    return True if str1 == str2 else False
-
-
 if __name__ == "__main__":
-    print(main("abcdfAghdeккAКefDeffl", "ккК"))
+    print(main("qwertyui", "ty"))
     # print(ord('A'))
