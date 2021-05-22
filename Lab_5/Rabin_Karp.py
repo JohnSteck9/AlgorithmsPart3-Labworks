@@ -28,9 +28,9 @@ class RabinCarp:
     def next_window(self):
         if self.window_end <= len(self.text) - 1:
             new_hash = (self.hash -
-                        (ord(self.text[self.window_start]) - 0) * self.base ** (self.pattern_len - 1)) \
+                        (ord(self.text[self.window_start]) - self.base_char) * self.base ** (self.pattern_len - 1)) \
                        * self.base \
-                       + ord(self.text[self.window_end]) - 0 \
+                       + ord(self.text[self.window_end]) - self.base_char \
                        % self.mod
 
             self.hash = new_hash

@@ -2,6 +2,8 @@ class Career:
     def __init__(self):
         self.layers_num = 0
         self.layers_list = []
+        self.a = 0
+        self.b = 0
 
     def read_file(self, filename):
         with open(filename, 'r') as f:
@@ -12,11 +14,11 @@ class Career:
 
     @staticmethod
     def write_file(filename: str, text: str):
-        f = open(filename, "w")
-        f.write(text)
-        f.close()
+        with open(filename, 'w') as f:
+            f.write(text)
 
     def find_bigger(self, layer_index: int, position_index: int):
+        self.b += 1
         left_position = self.layers_list[layer_index + 1][position_index]
         right_position = self.layers_list[layer_index + 1][position_index + 1]
 
@@ -28,7 +30,9 @@ class Career:
     def find_max_experience(self):
         for layer_index in range(self.layers_num - 2, -1, -1):
             for position_index in range(layer_index + 1):
+                self.a += 1
                 self.find_bigger(layer_index, position_index)
+        print(self.a, self.b)
         return self.layers_list[0][0]
 
 

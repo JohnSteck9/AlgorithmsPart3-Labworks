@@ -1,6 +1,7 @@
 def read_file(filename: str):
     rows = []
     idx = 1
+
     with open(filename, 'r') as f:
         data = f.readline().split()  # ['3', '3']
         rows_num, columns_num = int(data[0]), int(data[1])
